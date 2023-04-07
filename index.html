@@ -1,0 +1,289 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="./styles/style.css">
+<link rel="stylesheet" href="./styles/enter-button.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>CyberCitizens</title>
+</head>
+
+<body>
+    <header>
+  
+        <div class="logo">
+            <img id="scrollTop" src="./assets/title-header.png" alt="">
+        </div>
+        <input type="checkbox" name="" id="nav-toggle" class="nav-toggle">
+        <nav>
+      
+            <ul class="nav-links">
+            
+                <li id="wallet-btn"><button id="connectbtn"><i class="fa-solid fa-wallet"></i></button></li>
+
+                <span id="userbalance"></span>
+                <span id = "cypxbalance"></span>
+
+                <li><a href="#mint">Mint</a></li>
+                <li><a href="#roadmap">Map</a></li>    
+                <li><a href="#faq">F.A.Q</a></li>
+                <li><a href="#trailer">Trailer</a></li> 
+                <li><a  target="blank" href="https://docs.cyberversegame.io/whitepaper-v3./">Whitepaper V3</a></li>
+         
+            </ul>
+     
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
+    <div id="eggmintmodal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+      <h1>CyberEggs Info</h1>
+        </div>
+      </div>
+      <section class="s1 section fade-in">
+        <h1 class="title-text">CyberEggs Event</h1>
+        <div class="container-inner">
+          <div class="eggs-container" id="innercont">
+            <div class="egg-container">
+              <img src="./assets/transparent-eggs/Bismuth.png" alt="Egg" /><br>
+              <button id="mintbtn">Mint</button>
+            </div>
+            <div class="egg-container">
+              <div class="egg-arrow-container">
+                <img src="assets/transparent-eggs/Green.png" alt="Egg" />
+                <i class="fas fa-arrow-right"></i>
+                <div class="pet-container">
+                  <img src="./assets/stage1.png" alt="Pet" id="petimg"/>
+                </div>
+              </div>
+              <button id="hatchbtn">Hatch</button>
+              <div class="info-btn">
+                <i class="fas fa-info-circle" id="infoBtn"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <style>
+        .container-inner {
+          width: 100%;
+          margin: 0 auto;
+          display: block;
+        }
+      
+        .eggs-container {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+      
+        .fa-arrow-right {
+          color: var(--pink);
+        }
+      
+        .egg-container {
+          display: inline-block;
+          width: 20%;
+          align-items: center;
+          text-align: center;
+          height: 200px;
+          border: 1px solid var(--pink);
+          padding: 10px;
+          margin-right: 5%;
+          margin-bottom: 30px;
+        }
+      
+        .egg-container:last-of-type {
+          margin-right: 0;
+        }
+      
+        .egg-container img {
+          width: 100%;
+          height: 70%;
+          object-fit: contain;
+        }
+      
+        #eggmintmodal {
+          text-align: center;
+        }
+      
+        .egg-container button {
+          display: block;
+          margin: 10px auto 0;
+        }
+      
+        .egg-arrow-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 70%;
+        }
+      
+        .egg-arrow-container img {
+          width: 40%;
+          color: var(--pink);
+          height: 100%;
+          object-fit: contain;
+          margin-right: 20px;
+        }
+      
+        .fa-arrow-right {
+          margin-right: 50px;
+        }
+      
+        .pet-container {
+          width: 25%;
+          height: 100%;
+          object-fit: fill;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      
+        #petimg {
+          width: 100%;
+          height: 25%;
+          object-fit: fill;
+        }
+      
+        button#hatchbtn,
+        button#mintbtn {
+          display: block;
+          margin: 10px auto 0;
+          color: yellow;
+          background: transparent;
+          cursor: pointer;
+          border: 0.5px solid var(--pink);
+        }
+      
+        button#hatchbtn:hover,
+        button#mintbtn:hover {
+          color: var(--pink);
+          border: 0.5px solid var(--yellow);}
+
+
+.fa-info-circle {
+  font-size: 30px;
+  color: yellow;
+  position: fixed;
+
+  cursor: pointer;
+}
+.fa-info-circle:hover {
+  font-size: 30px;
+  color: var(--pink);
+  
+
+  cursor: pointer;
+}
+.info-btn {
+  position: relative; /* Add position relative to the container */
+}
+
+.info-btn i {
+  position: absolute; /* Add position absolute to the icon */
+  top: -150px; /* Adjust the top and right values as needed */
+  right: 10px;
+}
+@media screen and (max-width: 768px) {
+  .eggs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .egg-container {
+    width: 80%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .egg-arrow-container {
+    justify-content: space-between;
+  }
+
+  .egg-arrow-container img {
+    width: 40%;
+    margin-right: 0;
+  }
+
+  #petimg {
+    width: 30%;
+  }
+}
+      </style>
+<section class="s2 section fade-in">
+    <h1 class="title-text">Stages of the pets</h1>
+    <div class="container-stages">
+      <div class="inner-container-stages" id="stage1">
+        <img src="./assets/stage1.png" class="stage-img" />
+        <h2>Stage 1</h2>
+      </div>
+      <div class="inner-container-stages" id="stage2">
+        <img src="./assets/stage2.png" class="stage-img" />
+        <h2>Stage 2</h2>
+      </div>
+      <div class="inner-container-stages" id="stage3">
+        <img src="./assets/stage3.png" class="stage-img" />
+        <h2>Stage 3</h2>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo-container">
+            <img class="logo" src="./assets/CyberVerseLanding/title-header.png" alt="ergopixels logo">
+        </div>
+        <div class="svg-container">
+            <a  target="blank" href="https://twitter.com/ErgoPixels"><img class="twitter" src="./assets/logo-twitter.svg"
+                    alt="twitter logo"></a>
+            <a target="blank" href="https://discord.com/invite/7FcEFKcKJ7"><img class="discord" src="./assets/logo-discord.svg"
+                    alt="discord logo"></a>
+        </div>
+        <div class="footer-text">
+            CyberCitizens is an NFT project by the ERGOPixels team.
+        </div>
+    </div>
+</footer>
+
+<script src="bundle.js"></script>
+<script>// Get the modal
+    var modal = document.getElementById("eggmintmodal");
+    
+    // Get the button that opens the modal
+    var infoBtn = document.getElementById("infoBtn");
+    
+    // Get the <span> element that closes the modal
+    var closeBtn = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal
+    infoBtn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }</script>
+    </body>
