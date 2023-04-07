@@ -16,7 +16,7 @@ const images = ["assets/cybercitizens/0.png",
     "assets/cybercitizens/590.png",
 ];
 
-let x = 0;
+let x = 0;  
 
 if (scrollUp) {
     scrollUp.addEventListener('click', () => {
